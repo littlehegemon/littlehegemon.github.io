@@ -1,0 +1,18 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh">
+	<head>
+		<title>翻译英文日期</title>
+	</head>
+	<body>
+		<h1 style="color:green">翻译英文日期</h1>
+		<div style="width:680px;font-size:80%">
+		将“January 1, 2013”和“1 January 2013”转换为“2013年1月1日”。<br />
+		作者：維基小霸王
+		<br /><br />
+		<br />
+		</div>
+		<textarea id="text" rows="15" cols="80" ></textarea><br />
+		<input type="button"  value="转换（英文-->年月日）"  xml:lang="zh-cn" onclick='document.getElementById("text").value=document.getElementById("text").value.replace(/([0-9]{1,2})\s+(January|February|March|April|May|June|July|August|September|October|November|December)\s+([0-9]{4})/g,"$3年$2月$1日").replace(/(January|February|March|April|May|June|July|August|September|October|November|December)\s+([0-9]{1,2}),\s+([0-9]{4})/g,"$3年$1月$2日").replace(/(January|February|March|April|May|June|July|August|September|October|November|December),?\s+([0-9]{4})/g,"$2年$1月").replace(/年January月/g,"年1月").replace(/年February月/g,"年2月").replace(/年March月/g,"年3月").replace(/年April月/g,"年4月").replace(/年May月/g,"年5月").replace(/年June月/g,"年6月").replace(/年July月/g,"年7月").replace(/年August月/g,"年8月").replace(/年September月/g,"年9月").replace(/年October月/g,"年10月").replace(/年November月/g,"年11月").replace(/年December月/g,"年12月");' /> <input type="button"  value="转换（年月日-->--）"  xml:lang="zh-cn" onclick='document.getElementById("text").value=document.getElementById("text").value.replace(/([0-9]{4})年([0-9]{1,2})月([0-9]{1,2})日/g,"$1-$2-$3").replace(/([0-9]{4})年([0-9]{1,2})月/g,"$1-$2")' />
+
+	<!--	維基小霸王 2017.1.20      -->
+	</body>
+</html>
