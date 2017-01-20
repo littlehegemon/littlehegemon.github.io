@@ -4,7 +4,8 @@
 </head>
 <script>
     var en2zh = function(str) {
-        return str.replace(/(\d{1,2})\s+(January|February|March|April|May|June|July|August|September|October|November|December)\s+(\d{4})/g,"$3年$2月$1日").replace(/(January|February|March|April|May|June|July|August|September|October|November|December)\s+(\d{1,2}),\s+(\d{4})/g,"$3年$1月$2日").replace(/(January|February|March|April|May|June|July|August|September|October|November|December),?\s+(\d{4})/g,"$2年$1月").replace(/年January月/g,"年1月").replace(/年February月/g,"年2月").replace(/年March月/g,"年3月").replace(/年April月/g,"年4月").replace(/年May月/g,"年5月").replace(/年June月/g,"年6月").replace(/年July月/g,"年7月").replace(/年August月/g,"年8月").replace(/年September月/g,"年9月").replace(/年October月/g,"年10月").replace(/年November月/g,"年11月").replace(/年December月/g,"年12月");
+        return str.replace(/(\d{1,2})\s+(January|February|March|April|May|June|July|August|September|October|November|December)\s+(\d{4})/g,"$3年$2月$1日").replace(/(January|February|March|April|May|June|July|August|September|October|November|December|Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s+(\d{1,2}),\s+(\d{4})/g,"$3年$1月$2日").replace(/(January|February|March|April|May|June|July|August|September|October|November|December),?\s+(\d{4})/g,"$2年$1月")
+        .replace(/年(January|Jan)月/g,"年1月").replace(/年(February|Feb)月/g,"年2月").replace(/年(March|Mar)月/g,"年3月").replace(/年(April|Apr)月/g,"年4月").replace(/年(May|May)月/g,"年5月").replace(/年(June|Jun)月/g,"年6月").replace(/年(July|Jul)月/g,"年7月").replace(/年(August|Aug)月/g,"年8月").replace(/年(September|Sep)月/g,"年9月").replace(/年(October|Oct)月/g,"年10月").replace(/年(November|Nov)月/g,"年11月").replace(/年(December|Dec)月/g,"年12月");
     }
     var zh2iso = function(str) {
         return str.replace(/(\d{4})年(\d{1,2})月(\d{1,2})日/g,"$1-$2-$3").replace(/(\d{4})年(\d{1,2})月/g,"$1-$2").replace(/\b\d\b/g, "0$&");
